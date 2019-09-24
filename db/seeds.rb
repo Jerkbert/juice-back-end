@@ -31,19 +31,22 @@ lizzy = User.create(
 green_monster = Juice.create(
     name: "Green Monsta",
     imageURL: "https://cdn.shopify.com/s/files/1/2182/0257/articles/Green-Monster-620x320_85bda8a5-9475-4eaa-b294-6ee2b3cece49.jpg?v=1539634234",
-    user: lizzy
+    user: lizzy, 
+    creator: "Lizzy"
 )
 
 gogo_juice = Juice.create(
     name: "Go Go Juice",
     imageURL: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-img.health.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_16_9%2Fpublic%2Fstyles%2Fmain%2Fpublic%2Fice-coffee-summer-gettyimages-543066350.jpg%3Fitok%3DeUl5xgzq%261526054243&w=300&h=300&c=sc&poi=face&q=85",
-    user: rob
+    user: rob,
+    creator: "Rob"
 )
 
 unicorn_power = Juice.create(
     name: "Unicorn Power",
     imageURL: "https://www.floridamilk.com/core/fileparse.php/26/urlt/Unicorn_FB_1000x1000.jpg",
-    user: martin
+    user: martin,
+    creator: "Martin"
 )
 
 kale = Ingredient.create(

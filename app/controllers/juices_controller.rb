@@ -13,7 +13,8 @@ class JuicesController < ApplicationController
         name = params[:name]
         image = params[:imageURL]
         user = params[:user_id]
-        juice = Juice.create(name: name, imageURL: image, user_id: user)
+        creator = params[:creator]
+        juice = Juice.create(name: name, imageURL: image, creator: creator, user_id: user)
 
         render json: juice
     end
