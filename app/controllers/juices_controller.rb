@@ -10,14 +10,18 @@ class JuicesController < ApplicationController
     end
 
     def create
-        name = params[:name]
-        image = params[:imageURL]
-        user = params[:user_id]
-        creator = params[:creator]
-        ingredients = params[:ing]
-        directions = params[:directions]
-        juice = Juice.create(name: name, imageURL: image, creator: creator, user_id: user, ing: ingredients, directions: directions)
+        # test = Juice.create(juice_params)
+        test = Juice.create(juice_params)
+        render json: test
+        # byebug 
 
-        render json: juice
     end
+
+    private 
+
+    def juice_params
+        params.require(:juice).permit(:name, :imageURL, :user_id, :creator, :ing, :directions)
+        # params.permit(:name, :imageURL, :user_id, :creator, :ing, :directions)
+    end
+
 end
