@@ -13,7 +13,7 @@ class IngredientsController < ApplicationController
         name = params[:name]
         category = params[:category]
         nutrition_value = params[:nutrition_value]
-        juice = params[:juice_id]
+        juice = params[:juice_id]        
         ingredient = Ingredient.create(name: name, category: category, nutrition_value: nutrition_value, juice_id: juice)
 
         render json: ingredient
