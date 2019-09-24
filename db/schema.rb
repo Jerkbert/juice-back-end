@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_09_24_161934) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.integer "nutrition_value"
     t.bigint "juice_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_09_24_161934) do
 
   create_table "juices", force: :cascade do |t|
     t.string "name"
+    t.string "imageURL"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
